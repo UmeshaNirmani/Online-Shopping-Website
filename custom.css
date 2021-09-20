@@ -1,12 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
-@media only screen and (max-width: 601px) {
-}
-
-@media only screen and (min-width: 320px) {
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +8,7 @@
 body {
   background-color: #ffe6ff;
 }
-nav {
+header {
   display: flex;
   position: sticky;
   justify-content: flex-end;
@@ -32,13 +26,13 @@ nav {
   display: flex;
   align-items: center;
   font-size: 1em;
-  margin-right: 40px;
+  gap: 1rem;
+  margin-right: 3%;
 }
 .icons em {
   padding: 10px;
   height: 10px;
   width: 15px;
-  margin-right: 20px;
 }
 .icons em:hover {
   font-size: 1.5em;
@@ -48,39 +42,47 @@ nav {
 .fa-heart {
   color: #8c1f33;
 }
-.main {
+.main-menu {
   display: grid;
-  grid-template-columns: 150px 150px 150px;
-  margin: 40px 40px;
+  grid-template-columns: 170px 170px 170px;
+  margin-top: 2%;
+  background-color: #d32344;
 }
-.main a {
-  display: block;
+.nav-links {
   font-family: "Nunito", sans-serif;
   text-decoration: none;
   text-transform: uppercase;
   color: #000;
-  height: 50px;
+  padding: 10px;
+  padding-left: 20px;
+  margin: 5px;
 }
-.main a:hover {
+.nav-links:hover {
   font-weight: bold;
   color: #8c1f33;
-}
-.main li {
-  list-style: none;
 }
 .dropdown-1 {
   visibility: hidden;
   display: grid;
-  grid-template-columns: 150px 150px 150px 150px 150px;
-}
-.main a:hover:first-child ~ .dropdown-1 a {
-  visibility: visible;
+  grid-template-columns: 170px 170px 170px;
+  background-color: #be1e3b;
 }
 .dropdown-2 {
   visibility: hidden;
   display: grid;
-  grid-template-columns: 100px 100px 100px 150px 150px;
+  grid-template-columns: 170px 170px 170px;
+  grid-row-start: 4;
+  background-color: #da1f41;
 }
-.dropdown-1 a:hover:first-child ~ .dropdown-2 {
+.main-menu:hover:first-child > .dropdown-1 {
   visibility: visible;
+}
+.dropdown-1:hover:nth-child(4) > .dropdown-2 {
+  visibility: visible;
+}
+
+@media only screen and (max-width: 601px) {
+}
+
+@media only screen and (min-width: 320px) {
 }
