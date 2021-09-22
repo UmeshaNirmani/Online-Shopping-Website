@@ -4,6 +4,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body {
   background-color: #ffe6ff;
@@ -26,7 +27,7 @@ header {
   display: flex;
   align-items: center;
   font-size: 1em;
-  gap: 1rem;
+  gap: 1em;
   margin-right: 3%;
 }
 .icons em {
@@ -42,9 +43,9 @@ header {
 .fa-heart {
   color: #8c1f33;
 }
-.main-menu{
+.main-menu {
   display: grid;
-  grid-template-columns: 170px 170px 170px;
+  grid-template-columns: 200px 200px 200px;
   list-style: none;
   margin-top: 2%;
 }
@@ -62,91 +63,36 @@ header {
   font-weight: bold;
   color: #8c1f33;
 }
-.dropdown-1 {  
+.dropdown-1 {
   display: grid;
-  grid-template-columns: 170px 170px 170px;
+  grid-template-columns: 200px 200px 200px;
   grid-row-start: 4;
   list-style: none;
   visibility: hidden;
   background-color: #fff;
-  width: 600px;
+  width: 650px;
   padding-bottom: 20px;
-}
-.dropdown-2{
-  display: flex;
-  position: absolute;
-  flex-wrap: wrap;
-  Z-index: 3;
-  list-style: none;
-  visibility: hidden;
-  background-color: #fff;
-  width: 600px;
-  padding-bottom: 20px;
-}
-.main-menu:hover .dropdown-1{
-  visibility: visible;
-  
-}
-.dropdown-1:hover .dropdown-2{
-  visibility: visible;
-}
-
-
-
-
-@media only screen and (max-width: 601px) {
-}
-
-@media only screen and (min-width: 320px) {
-}
-
-/* .main-menu:first-child
-.main-menu:nth-child(4)
-#hoverMe-1 */
-
-/* 
-.main-menu {
-  display: grid;
-  grid-template-columns: 170px 170px 170px;
-  display: flex;
-flex-direction: row;
-  margin-top: 2%;
-  background-color: #d32344;
-}
-.main-menu a {
-  font-family: "Nunito", sans-serif;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #000;
-  list-style: none;
-  padding: 10px;
-  padding-left: 20px;
-  margin: 5px;
-}
-li a:hover {
-  font-size: 700;
-  color: #8c1f33;
-}
-.dropdown-1 {
-  display: none;
-  display: grid;
-  grid-template-columns: 170px 170px 170px;
-  width: max-content;
-  background-color: #be1e3b;
-}
-.dropdown-1 li{
-  padding-left: 0;
-  margin: 0;
 }
 .dropdown-2 {
-  display: none;
   display: grid;
-  grid-template-columns: 170px 170px 170px;
-  width: max-content;
-  grid-row-start: 4;
-  background-color: #da1f41;
+  grid-template-columns: 200px 200px 200px;
+  position: absolute;
+  z-index: 3;
+  list-style: none;
+  visibility: hidden;
+  background-color: #fff;
+  width: 650px;
+  padding-bottom: 20px;
 }
-.dropdown-2 li{
-  padding-left: 0;
+.main-menu:hover .dropdown-1 {
+  visibility: visible;
 }
-*/
+.dropdown-1:hover .dropdown-2 {
+  visibility: visible;
+}
+
+@media only screen and (max-width: 1000px) {
+}
+
+@media only screen and (min-width: 600px) {
+}
