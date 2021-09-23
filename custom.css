@@ -80,7 +80,7 @@ header {
   list-style: none;
   visibility: hidden;
   background-color: #fff;
-  width: 650px;
+  width: 100%;
   padding-bottom: 20px;
 }
 .main-menu li:hover > .dropdown-1 {
@@ -90,7 +90,7 @@ header {
   grid-row-start: 4;
   list-style: none;
   background-color: #fff;
-  width: 650px;
+  width: 100%;
   padding-bottom: 20px;
 }
 .dropdown-1 li:hover > .dropdown-2 {
