@@ -63,15 +63,14 @@ header {
   font-weight: bold;
   color: #8c1f33;
 }
+.main-menu li a:hover .fa-angle-down {
+  transform: rotate(180deg);
+  transition: all 0.3s linear;
+  font-size: 25px;
+  color: #8c1f33;
+}
 .dropdown-1 {
-  display: grid;
-  grid-template-columns: 200px 200px 200px;
-  grid-row-start: 4;
-  list-style: none;
-  visibility: hidden;
-  background-color: #fff;
-  width: 650px;
-  padding-bottom: 20px;
+  display: none;
 }
 .dropdown-2 {
   display: grid;
@@ -84,10 +83,17 @@ header {
   width: 650px;
   padding-bottom: 20px;
 }
-.main-menu:hover .dropdown-1 {
-  visibility: visible;
+.main-menu li:hover > .dropdown-1 {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  position: absolute;
+  grid-row-start: 4;
+  list-style: none;
+  background-color: #fff;
+  width: 650px;
+  padding-bottom: 20px;
 }
-.dropdown-1:hover .dropdown-2 {
+.dropdown-1 li:hover > .dropdown-2 {
   visibility: visible;
 }
 
